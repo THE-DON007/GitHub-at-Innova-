@@ -30,7 +30,7 @@ fellows.push({
 
 // Looping through every fellow profile
 for (let fellow of fellows) {
-    console.log("===== Fellow Profile =====");
+    console.log("Fellow Profile");
     console.log(`Name: ${fellow.name}`);
     console.log(`Role: ${fellow.role}`);
     console.log(`Points: ${fellow.points}`);
@@ -43,5 +43,5 @@ for (let fellow of fellows) {
         console.log("Status: Keep Improving");
     }
 
-    console.log("==========================\n");
+    console.log("\n");
 }
