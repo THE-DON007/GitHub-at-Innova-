@@ -1,0 +1,43 @@
+// Challenge 1: Find duplicates in a list
+// Approach:
+// I will compare each item in the array with the names I have already seen.
+// If an item appears again and is not already in the duplicate list,
+// I will add it to the duplicate list.
+
+const names = [
+    "Alice",
+    "Bob",
+    "David",
+    "Alice",
+    "Sarah",
+    "Bob",
+];
+
+
+function findDuplicates(array) {
+
+    let seen = [];
+    let duplicates = [];
+
+    for (let name of array) {
+
+        if (seen.includes(name)) {
+
+            if (!duplicates.includes(name)) {
+                duplicates.push(name);
+            }
+
+        } else {
+
+            seen.push(name);
+
+        }
+
+    }
+
+    return duplicates;
+}
+
+
+console.log("Duplicates:");
+console.log(findDuplicates(names));
