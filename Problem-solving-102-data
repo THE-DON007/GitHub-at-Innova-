@@ -14,7 +14,6 @@ const names = [
 ];
 
 function findDuplicates(array) {
-
     let seen = [];
     let duplicates = [];
     for (let name of array) {
@@ -28,15 +27,13 @@ function findDuplicates(array) {
         } else {
 
             seen.push(name);
-
         }
-
     }
-
     return duplicates;
 }
 console.log("Duplicates:");
 console.log(findDuplicates(names));
+
 
 
 // Challenge 2: Find fellows who scored above a certain mark
@@ -64,7 +61,6 @@ const fellows = [
     }
 ];
 
-
 function findHighScores(fellows, limit) {
 
     let successfulFellows = [];
@@ -74,17 +70,69 @@ function findHighScores(fellows, limit) {
         if (fellow.score > limit) {
             successfulFellows.push(fellow);
         }
-
     }
-
     return successfulFellows;
 }
 
-
 let result = findHighScores(fellows, 70);
-
 console.log("Fellows who scored above 70:");
 
 for (let fellow of result) {
     console.log(`${fellow.name} scored ${fellow.score}`);
+}
+
+
+
+// Challenge 3: Group items by category
+// Approach:
+// I will go through each product and check its category.
+// If the category already exists, I will add the product to it.
+// If the category does not exist, I will create a new category first.
+
+const products = [
+    {
+        name: "Laptop",
+        category: "Technology"
+    },
+    {
+        name: "Phone",
+        category: "Technology"
+    },
+    {
+        name: "Chair",
+        category: "Furniture"
+    },
+    {
+        name: "Table",
+        category: "Furniture"
+    },
+    {
+        name: "Book",
+        category: "Education"
+    }
+];
+
+function groupByCategory(products) {
+
+    let groupedProducts = {};
+
+    for (let product of products) {
+        let category = product.category;
+
+        if (!groupedProducts[category]) {
+            groupedProducts[category] = [];
+        }
+        groupedProducts[category].push(product.name);
+    }
+    return groupedProducts;
+}
+
+console.log("Products grouped by category:");
+let groupedResult = groupByCategory(products);
+for (let category in groupedResult) {
+    console.log(category + ":");
+
+    for (let item of groupedResult[category]) {
+        console.log("- " + item);
+    }
 }
