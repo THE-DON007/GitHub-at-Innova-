@@ -13,12 +13,10 @@ const names = [
     "Bob",
 ];
 
-
 function findDuplicates(array) {
 
     let seen = [];
     let duplicates = [];
-
     for (let name of array) {
 
         if (seen.includes(name)) {
@@ -37,7 +35,56 @@ function findDuplicates(array) {
 
     return duplicates;
 }
-
-
 console.log("Duplicates:");
 console.log(findDuplicates(names));
+
+
+// Challenge 2: Find fellows who scored above a certain mark
+// Approach:
+// I will go through each fellow's information and compare their score
+// with the required mark. If the score is higher than the limit,
+// I will add that fellow to a new list of successful results.
+
+const fellows = [
+    {
+        name: "Don",
+        score: 85
+    },
+    {
+        name: "Chris",
+        score: 65
+    },
+    {
+        name: "Anna",
+        score: 90
+    },
+    {
+        name: "Mark",
+        score: 70
+    }
+];
+
+
+function findHighScores(fellows, limit) {
+
+    let successfulFellows = [];
+
+    for (let fellow of fellows) {
+
+        if (fellow.score > limit) {
+            successfulFellows.push(fellow);
+        }
+
+    }
+
+    return successfulFellows;
+}
+
+
+let result = findHighScores(fellows, 70);
+
+console.log("Fellows who scored above 70:");
+
+for (let fellow of result) {
+    console.log(`${fellow.name} scored ${fellow.score}`);
+}
