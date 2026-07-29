@@ -1,6 +1,6 @@
-/* ===========================
+/* 
    GENERAL STYLING
-=========================== */
+*/
 
 *{
     margin:0;
@@ -10,14 +10,14 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#eef3f8;
+    background:#e8eaec;
     color:#333;
     line-height:1.6;
 }
 
-/* ===========================
+/* 
    HEADER
-=========================== */
+*/
 
 header{
     background:#102542;
@@ -36,9 +36,9 @@ header p{
     font-size:1.1rem;
 }
 
-/* ===========================
+/*
    NAVIGATION
-=========================== */
+*/
 
 nav{
     background:white;
@@ -67,9 +67,9 @@ nav{
     color:#00a8cc;
 }
 
-/* ===========================
+/* 
    MAIN
-=========================== */
+*/
 
 main{
     width:90%;
@@ -77,9 +77,9 @@ main{
     margin:40px auto;
 }
 
-/* ===========================
+/*
    SECTIONS
-=========================== */
+*/
 
 section{
     background:white;
@@ -96,9 +96,9 @@ section h2{
     padding-left:10px;
 }
 
-/* ===========================
+/* 
    IMAGE
-=========================== */
+*/
 
 figure{
     text-align:center;
@@ -120,9 +120,9 @@ figcaption{
     color:#666;
 }
 
-/* ===========================
+/*
    INTERESTS (FLEXBOX)
-=========================== */
+   */
 
 .interest-cards{
     display:flex;
@@ -145,9 +145,9 @@ figcaption{
     transform:translateY(-5px);
 }
 
-/* ===========================
+/* 
    GOALS
-=========================== */
+*/
 
 ol{
     padding-left:20px;
@@ -157,9 +157,9 @@ ol li{
     margin:10px 0;
 }
 
-/* ===========================
+/* 
    TABLE
-=========================== */
+*/
 
 table{
     width:100%;
@@ -181,9 +181,9 @@ tr:nth-child(even){
     background:#f8f8f8;
 }
 
-/* ===========================
+/*
    QUOTE
-=========================== */
+*/
 
 blockquote{
     background:#eef8fb;
@@ -192,9 +192,9 @@ blockquote{
     font-style:italic;
 }
 
-/* ===========================
+/* 
    DETAILS
-=========================== */
+*/
 
 details{
     background:#f4f7fb;
@@ -207,9 +207,9 @@ summary{
     font-weight:bold;
 }
 
-/* ===========================
+/* 
    LINKS
-=========================== */
+*/
 
 a{
     color:#0077b6;
@@ -219,9 +219,9 @@ a:hover{
     color:#00a8cc;
 }
 
-/* ===========================
+/* 
    FOOTER
-=========================== */
+*/
 
 footer{
     background:#102542;
@@ -229,4 +229,85 @@ footer{
     text-align:center;
     padding:25px;
     margin-top:30px;
+}
+
+/* Smooth scrolling when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation improvements */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 15px;
+}
+
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* Show More button styling */
+#toggleBtn {
+    background-color: #1f4e79;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+
+#toggleBtn:hover {
+    background-color: #163a5c;
+    transform: scale(1.05);
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #3d9dd4;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover {
+    background-color: white;
+    color: #1f4e79;
 }
